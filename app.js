@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
 
 app.get('/', function(req, res, next) {
 	broken = true;
-	res.status(200).send('The app is now broken!')
+	res.status(500).send('The app is now broken!')
 });
 
 app.use('/', indexRouter);
