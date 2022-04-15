@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
 });
 
 
-// app.use('/', indexRouter);
+app.use('/', indexRouter);
 app.use('/trains', trainsRouter);
 
 //this endpoint performs cpu-intensive calculations
@@ -41,7 +41,7 @@ app.get('/generate-cpu-load', function(req, res, next) {
 });
 
 //this endpoint triggers the app to simulate entering an unhealthy state by causing it to return 5XX errors.
-app.get('/', function(req, res, next) {
+app.get('/break', function(req, res, next) {
 	broken = true;
 	res.status(500).send('The app is now broken!')
 });
