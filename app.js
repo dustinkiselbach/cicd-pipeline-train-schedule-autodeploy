@@ -8,7 +8,7 @@ var broken = false;
 var indexRouter = require('./routes/index');
 var trainsRouter = require('./routes/trains');
 
-var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
