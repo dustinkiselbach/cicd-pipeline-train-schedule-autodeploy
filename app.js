@@ -27,6 +27,11 @@ app.use(function (req, res, next) {
    next();
 });
 
+app.get('/', function(req, res, next) {
+	broken = true;
+	res.status(200).send('The app is now broken!')
+});
+
 app.use('/', indexRouter);
 app.use('/trains', trainsRouter);
 
